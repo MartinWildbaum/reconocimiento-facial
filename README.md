@@ -20,15 +20,23 @@ cd reconocimiento-facial
 En macOS/Linux:
 
 ```
+python3 -m venv venv
 source venv/bin/activate
 ```
 En Windows:
 
 ```
+python -m venv venv
 venv\Scripts\activate
 ```
 
-### 3. Configurar la Base de Datos PostgreSQL
+### 3. Instalar Dependencias
+
+```
+pip install -r requirements.txt
+```
+
+### 4. Configurar la Base de Datos PostgreSQL
 Inicia PostgreSQL y crea una base de datos:
 
 ```
@@ -38,7 +46,7 @@ createuser --interactive  # Crea un usuario y dale los permisos necesarios
 ```
 Configura el acceso al usuario desde PostgreSQL y asegúrate de que tenga permisos suficientes en la base de datos creada.
 
-### 4. Crear Archivos Estáticos
+### 5. Crear Archivos Estáticos
 Descargar los modelos de face-api.js y colocarlos en la carpeta static/models.
 
 ```
@@ -52,14 +60,14 @@ wget https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/weig
 wget https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/weights/tiny_face_detector_model-shard1
 wget https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/weights/tiny_face_detector_model-weights_manifest.json
 ```
-### 5. Configuración de la Aplicación
+### 6. Configuración de la Aplicación
 Asegúrate de que las variables de configuración de la base de datos en app.py están correctamente configuradas:
 
 python
 ```
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://tu_usuario:tu_contraseña@localhost/reconocimiento_facial'
 ```
-### 6. Iniciar la Aplicación
+### 7. Iniciar la Aplicación
 
 ```
 python app.py
