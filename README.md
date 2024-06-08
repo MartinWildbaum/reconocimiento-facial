@@ -4,7 +4,7 @@ Este proyecto implementa un sistema de autenticación mediante reconocimiento fa
 
 ## Requisitos
 
-- Python 3.6+
+- Python 3.12
 - PostgreSQL
 - Virtualenv
 
