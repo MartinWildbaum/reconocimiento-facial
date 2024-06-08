@@ -142,3 +142,11 @@ reconocimiento-facial/
 ├── app.py
 ├── requirements.txt
 └── README.md
+```
+## Ejemplo de uso del sistema
+
+
+https://github.com/MartinWildbaum/reconocimiento-facial/assets/85357588/345f4ec4-63df-4fb9-82d1-59b506844dab
+
+
+
